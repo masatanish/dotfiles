@@ -1,5 +1,8 @@
 syntax on
 set nocompatible  " Use Vim defaults instead of 100% vi compatibility
+
+source ~/dotfiles/.vimrc.vundle
+
 set backspace=indent,eol,start  " more powerful backspacing
 "set number
 " for Insert with changint to Japanese off 

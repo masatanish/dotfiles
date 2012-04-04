@@ -1,0 +1,17 @@
+set nocompatible
+filetype off
+
+set rtp+=~/dotfiles/vimfiles/vundle.git/        " vundle directory
+call vundle#rc()
+" '%'でのカッコ移動
+Bundle 'matchit.zip'
+" matchitのruby拡張
+Bundle 'ruby-matchit'
+" ruby utility
+Bundle 'ruby.vim'
+" rails utility
+Bundle 'tpope/vim-rails'
+
+" enhanced status line
+Bundle 'Lokaltog/vim-powerline'
+filetype plugin indent on
