@@ -511,3 +511,7 @@ sy on
 
 " Conque setting
 let g:ConqueTerm_Color = 1
+
+
+" setting for dumbbuf.vim
+let g:dumbbuf_hotkey='<Leader>b'
