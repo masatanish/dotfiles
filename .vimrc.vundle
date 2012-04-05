@@ -17,4 +17,7 @@ Bundle 'Lokaltog/vim-powerline'
 
 " buffer preview
 Bundle 'DumbBuf'
+
+" comment out plugin
+Bundle 'scrooloose/nerdcommenter'
 filetype plugin indent on
