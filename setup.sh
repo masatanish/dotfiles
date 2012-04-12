@@ -2,7 +2,7 @@
 
 
 echo "set up dotfiles..."
-DOT_FILES=( .vimrc )
+DOT_FILES=( .vimrc .zshrc )
 
 for file in ${DOT_FILES[@]}
 do
@@ -13,7 +13,7 @@ do
             echo "WARNING: file already exists: $file"
         fi
     else
-        ln -s $/HOME/dotfiles/$file $HOME/$file
+        ln -s $HOME/dotfiles/$file $HOME/$file
         echo "created symbolic link: $file"
     fi
 done
