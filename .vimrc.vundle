@@ -19,5 +19,9 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'DumbBuf'
 
 " comment out plugin
-Bundle 'scrooloose/nerdcommenter'
+" Bundle 'scrooloose/nerdcommenter'
+
+" commentout ( from github)
+Bundle 'tomtom/tcomment_vim'
+
 filetype plugin indent on
