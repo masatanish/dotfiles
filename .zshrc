@@ -17,7 +17,7 @@ setopt nolistbeep
 # prompt
 autoload colors
 colors
-PROMPT="%{${fg[green]}%}[%n@%m] %(!.#.$) %{${reset_color}%}"
+PROMPT="%{${fg[green]}%}[%n@%m]%(!.#.$) %{${reset_color}%}"
 PROMPT2="%{${fg[green]}%}%_> %{${reset_color}%}"
 SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
 #RPROMPT="%{${fg[white]}%}[%~]%{${reset_color}%}"
@@ -39,6 +39,10 @@ setopt hist_ignore_dups # ignore duplication commands
 setopt share_history # share command history data
 
 
+# git completion
+autoload bashcompinit
+bashcompinit
+#source ~/.git-completion.sh
 
 ##################################
 # aliases
@@ -69,7 +73,8 @@ export PATH=~/tools/android-sdk-mac_x86/tools:$PATH
 export PATH=~/tools/android-sdk-mac_x86/platform-tools:$PATH
 
 
-
+# display git branch in prompt
+# see: http://d.hatena.ne.jp/uasi/20091017/1255712789
 function rprompt-git-current-branch {
         local name st color
 
@@ -98,5 +103,4 @@ function rprompt-git-current-branch {
 
 # プロンプトが表示されるたびにプロンプト文字列を評価、置換する
 setopt prompt_subst
-
 RPROMPT='[`rprompt-git-current-branch`%~]'
