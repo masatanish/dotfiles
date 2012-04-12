@@ -20,6 +20,6 @@ done
 if [ -a $HOME/.vimrc ]; then
 	echo "symbolic link exists: .vim"
 else
-	ln -s $/HOME/dotfiles/vimfiles $HOME/.vim
+	ln -s $HOME/dotfiles/vimfiles $HOME/.vim
 	echo "created symbolic link: .vim"
 fi
