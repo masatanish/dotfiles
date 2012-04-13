@@ -45,6 +45,8 @@ set showcmd
 set showmatch
 "検索結果文字列のハイライト
 set hlsearch
+" <ESC>x2でハイライトのキャンセル
+:nnoremap <ESC><ESC> :nohlsearch<CR>
 " 行番号の表示
 set number
 " コマンドライン補完するときに強化されたものを使う(参照 :help wildmenu)
