@@ -63,8 +63,8 @@ alias vim='/Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 # other settings
 #############################
 # for rvm(ruby version manager)
-if [[ -s /Users/hoge/.rvm/scripts/rvm ]] ; then
-   	source /Users/hoge/.rvm/scripts/rvm 
+if [[ -s $HOME/.rvm/scripts/rvm ]] ; then
+   	source $HOME/.rvm/scripts/rvm 
 fi
 
 # path
