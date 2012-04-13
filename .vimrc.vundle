@@ -24,4 +24,7 @@ Bundle 'DumbBuf'
 " commentout ( from github)
 Bundle 'tomtom/tcomment_vim'
 
+" インデントハイライト
+Bundle 'nathanaelkane/vim-indent-guides'
+
 filetype plugin indent on
