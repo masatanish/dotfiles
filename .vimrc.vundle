@@ -11,20 +11,17 @@ Bundle 'ruby-matchit'
 Bundle 'ruby.vim'
 " rails utility
 Bundle 'tpope/vim-rails'
-
 " enhanced status line
 Bundle 'Lokaltog/vim-powerline'
-
 " buffer preview
 Bundle 'DumbBuf'
-
 " comment out plugin
 " Bundle 'scrooloose/nerdcommenter'
-
 " commentout ( from github)
 Bundle 'tomtom/tcomment_vim'
-
 " インデントハイライト
 Bundle 'nathanaelkane/vim-indent-guides'
+" git plugin
+Bundle 'motemen/git-vim'
 
 filetype plugin indent on
