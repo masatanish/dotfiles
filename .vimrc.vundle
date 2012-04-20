@@ -9,6 +9,7 @@ Bundle 'matchit.zip'
 Bundle 'ruby-matchit'
 " ruby utility
 Bundle 'ruby.vim'
+Bundle 'vim-ruby/vim-ruby'
 " rails utility
 Bundle 'tpope/vim-rails'
 " enhanced status line
