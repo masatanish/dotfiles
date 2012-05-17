@@ -2,7 +2,7 @@
 
 
 echo "set up dotfiles..."
-DOT_FILES=( .vimrc .zshrc )
+DOT_FILES=( .vimrc .zshrc .vrapperrc )
 
 for file in ${DOT_FILES[@]}
 do
