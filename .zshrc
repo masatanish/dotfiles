@@ -8,6 +8,8 @@ setopt correct
 setopt list_packed
 setopt nolistbeep
 
+# zmv
+autoload zmv
 
 # predict
 # autoload predict-on
