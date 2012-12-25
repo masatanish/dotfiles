@@ -17,7 +17,7 @@ do
         echo "created symbolic link: $file"
     fi
 done
-if [ -a $HOME/.vimrc ]; then
+if [ -a $HOME/.vim ]; then
 	echo "symbolic link exists: .vim"
 else
 	ln -s $HOME/dotfiles/vimfiles $HOME/.vim
