@@ -1,0 +1,12 @@
+# create sybolic link
+$ cd dotfiles
+$ ./setup.sh
+
+# sync vundle submodule
+$ cd dotfiles
+$ git submodule init
+$ git submodule update
+
+# install vim plugins
+$ vim
+:BundileInstall
