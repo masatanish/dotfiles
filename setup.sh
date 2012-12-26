@@ -18,7 +18,11 @@ do
     fi
 done
 if [ -a $HOME/.vim ]; then
-	echo "symbolic link exists: .vim"
+	if [ -L $HOME/.vim ]; then
+		echo "symbolic link exists: .vim/"
+	else
+		echo "WARNING: file already exists: .vim"
+	fi
 else
 	ln -s $HOME/dotfiles/vimfiles $HOME/.vim
 	echo "created symbolic link: .vim"
