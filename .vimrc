@@ -153,6 +153,9 @@ au BufNewFile,BufRead app/**/*.rb set fenc=utf-8
 " for ruby indent
 au FileType ruby set ts=2 sw=2 expandtab
 
+" for python indent
+au FileType python set ts=4 sw=4 expandtab
+
 " rails.vim
 let g:rails_level=4
 let g:rails_default_file="app/controllers/application.rb"
