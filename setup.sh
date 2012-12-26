@@ -2,6 +2,7 @@
 
 
 echo "set up dotfiles..."
+echo "create symbolic links..."
 DOT_FILES=( .vimrc .zshrc .vrapperrc .rspec )
 
 for file in ${DOT_FILES[@]}
@@ -27,3 +28,7 @@ else
 	ln -s $HOME/dotfiles/vimfiles $HOME/.vim
 	echo "created symbolic link: .vim"
 fi
+
+
+echo "update git submodule"
+git submodule update --init
