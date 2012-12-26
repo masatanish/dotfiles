@@ -73,7 +73,9 @@ fi
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=~/tools/android-sdk-mac_x86/tools:$PATH
 export PATH=~/tools/android-sdk-mac_x86/platform-tools:$PATH
-
+export PATH=/Applications/VMware\ OVF\ Tool/:$PATH
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=/usr/local/bin:$PATH
 
 # display git branch in prompt
 # see: http://d.hatena.ne.jp/uasi/20091017/1255712789
@@ -106,3 +108,4 @@ function rprompt-git-current-branch {
 # プロンプトが表示されるたびにプロンプト文字列を評価、置換する
 setopt prompt_subst
 RPROMPT='[`rprompt-git-current-branch`%~]'
+
