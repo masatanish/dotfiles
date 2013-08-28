@@ -175,3 +175,7 @@ let g:dumbbuf_hotkey='<Leader>b'
 " setting for indent-guide(インデントのカラー表示)
 let g:indent_guides_enable_on_vim_startup = 1 " 起動時に表示
 let g:indent_guides_color_change_percent = 10 " 色の変化
+
+" rspec highlighting
+autocmd BufRead *_spec.rb syn keyword rubyRspec describe context it specify it_should_behave_like before after setup subject its shared_examples_for shared_context let
+highlight def link rubyRspec Function
