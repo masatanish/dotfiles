@@ -59,6 +59,12 @@ set hidden
 set autoread
 " ステータスラインの表示設定(0:なし, 2:常に表示)
 set laststatus=2
+" コマンドラインの表示設定
+set cmdheight=1
+" ビジュアルモードで選択したテキストが、クリップボードに入るようにする。
+set clipboard+=autoselect
+" 無名レジスタに入るデータを、*レジスタにも入れる。
+set clipboard+=unnamed
 
 " 文字コード関連
 " from ずんWiki http://www.kawaz.jp/pukiwiki/?vim#content_1_7
@@ -141,11 +147,6 @@ hi Pmenu ctermbg=8
 hi PmenuSel ctermbg=12
 hi PmenuSbar ctermbg=0
 
-" encoding
-nmap ,U :set encoding=utf-8<CR>
-nmap ,E :set encoding=euc-jp<CR>
-nmap ,S :set encoding=cp932<CR>
-
 " rails
 au BufNewFile,BufRead app/**/*.rhtml set fenc=utf-8
 au BufNewFile,BufRead app/**/*.rb set fenc=utf-8
@@ -176,6 +177,19 @@ let g:dumbbuf_hotkey='<Leader>b'
 let g:indent_guides_enable_on_vim_startup = 1 " 起動時に表示
 let g:indent_guides_color_change_percent = 10 " 色の変化
 
+let g:lightline = {
+      \ 'colorscheme': 'solarized'
+      \ }
+
 " rspec highlighting
 autocmd BufRead *_spec.rb syn keyword rubyRspec describe context it specify it_should_behave_like before after setup subject its shared_examples_for shared_context let
 highlight def link rubyRspec Function
+
+""" keymap
+" encoding
+nmap ,U :set encoding=utf-8<CR>
+nmap ,E :set encoding=euc-jp<CR>
+nmap ,S :set encoding=cp932<CR>
+
+nnoremap ,f :NERDTreeToggle<CR>
+nnoremap ,b :BufExplorer<CR>

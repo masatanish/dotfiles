@@ -13,16 +13,21 @@ Bundle 'vim-ruby/vim-ruby'
 " rails utility
 Bundle 'tpope/vim-rails'
 " enhanced status line
-Bundle 'Lokaltog/vim-powerline'
+"Bundle 'Lokaltog/vim-powerline' # deprecated
+Bundle 'itchyny/lightline.vim'
 " buffer preview
 Bundle 'DumbBuf'
 " comment out plugin
 " Bundle 'scrooloose/nerdcommenter'
 " commentout ( from github)
 Bundle 'tomtom/tcomment_vim'
-" インデントハイライト
-Bundle 'nathanaelkane/vim-indent-guides'
-" git plugin
-Bundle 'motemen/git-vim'
+" indent highlighting
+
+" NERDTree (tree file explorer)
+Bundle 'scrooloose/nerdtree'
+" Buffer explorer
+Bundle 'bufexplorer.zip'
+" Git plug-in
+Bundle 'tpope/vim-fugitive'
 
 filetype plugin indent on
