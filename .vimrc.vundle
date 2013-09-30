@@ -22,7 +22,7 @@ Bundle 'DumbBuf'
 " commentout ( from github)
 Bundle 'tomtom/tcomment_vim'
 " indent highlighting
-
+Bundle 'nathanaelkane/vim-indent-guides'
 " NERDTree (tree file explorer)
 Bundle 'scrooloose/nerdtree'
 " Buffer explorer
