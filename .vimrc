@@ -1,7 +1,10 @@
 syntax on
 set nocompatible  " Use Vim defaults instead of 100% vi compatibility
 
+
+
 source ~/dotfiles/.vimrc.vundle
+
 
 set backspace=indent,eol,start  " more powerful backspacing
 " for Insert with changint to Japanese off 
@@ -137,10 +140,20 @@ endif
 autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
 
 
-" 16色
-set t_Co=16
+" colorscheme settings
+if (&term =~ "xterm-256color") || (&term =~ "screen-256color")
+  set t_Co=256
+  let g:solarized_termcolors=256
+elseif
+  set t_Co=16
+endif
+
+set background=dark
+colorscheme solarized
+
 set t_Sf=[3%dm
 set t_Sb=[4%dm
+
 
 " 補完候補の色づけ for vim7
 hi Pmenu ctermbg=8
