@@ -68,6 +68,8 @@ set cmdheight=1
 set clipboard+=autoselect
 " 無名レジスタに入るデータを、*レジスタにも入れる。
 set clipboard+=unnamed
+" カーソル行のハイライト
+set cursorline
 
 " 文字コード関連
 " from ずんWiki http://www.kawaz.jp/pukiwiki/?vim#content_1_7
@@ -141,13 +143,13 @@ autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
 
 
 " colorscheme settings
+
 if (&term =~ "xterm-256color") || (&term =~ "screen-256color")
   set t_Co=256
   let g:solarized_termcolors=256
 elseif
   set t_Co=16
 endif
-
 set background=dark
 colorscheme solarized
 
@@ -188,7 +190,13 @@ let g:dumbbuf_hotkey='<Leader>b'
 
 " setting for indent-guide(インデントのカラー表示)
 let g:indent_guides_enable_on_vim_startup = 1 " 起動時に表示
-let g:indent_guides_color_change_percent = 10 " 色の変化
+let g:indent_guides_color_change_percent = 20 " 色の変化
+let g:indent_guides_guide_size = 1            " ガイドのサイズ
+let g:indent_guides_start_level = 2           " 開始レベル
+
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgray
 
 let g:lightline = {
       \ 'colorscheme': 'solarized'
