@@ -29,6 +29,8 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'bufexplorer.zip'
 " Git plug-in
 Bundle 'tpope/vim-fugitive'
+" Gtagls
+Bundle 'gtags.vim'
 
 
 " wombat カラースキーム
