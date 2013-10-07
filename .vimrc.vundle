@@ -15,8 +15,6 @@ Bundle 'tpope/vim-rails'
 " enhanced status line
 "Bundle 'Lokaltog/vim-powerline' # deprecated
 Bundle 'itchyny/lightline.vim'
-" buffer preview
-Bundle 'DumbBuf'
 " comment out plugin
 " Bundle 'scrooloose/nerdcommenter'
 " commentout ( from github)
@@ -29,10 +27,17 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'bufexplorer.zip'
 " Git plug-in
 Bundle 'tpope/vim-fugitive'
-" Gtagls
+" Gtags
 Bundle 'gtags.vim'
+" Qfixgrep(grep plugin
+Bundle 'fuenor/qfixgrep'
+" memolist
+Bundle 'glidenote/memolist.vim'
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" color schemes
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " wombat カラースキーム
 Bundle 'jeffreyiacono/vim-colors-wombat'
 " jellybeans カラースキーム
