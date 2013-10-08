@@ -33,6 +33,13 @@ Bundle 'gtags.vim'
 Bundle 'fuenor/qfixgrep'
 " memolist
 Bundle 'glidenote/memolist.vim'
+" quickrun (execute scripts or programs)
+Bundle 'thinca/vim-quickrun'
+" vimproc (async execution)
+" note: need build after BundlerInstall
+"   $ cd ~/.vim/bundle/vimproc
+"   $ make -f make_mac.mak
+Bundle 'Shougo/vimproc'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""

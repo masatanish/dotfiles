@@ -189,7 +189,7 @@ set fenc=utf-8
 let g:memolist_path = "~/Dropbox/memo"
 let g:memolist_qfixgrep = 1
 
-" setting for indent-guide(インデントのカラー表示)
+" settings for indent-guide(インデントのカラー表示)
 let g:indent_guides_enable_on_vim_startup = 1 " 起動時に表示
 let g:indent_guides_color_change_percent = 20 " 色の変化
 let g:indent_guides_guide_size = 1            " ガイドのサイズ
@@ -199,9 +199,21 @@ let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgray
 
+" settings for lightline
 let g:lightline = {
       \ 'colorscheme': 'solarized'
       \ }
+
+" settings for quickrun
+let g:quickrun_config = {}
+let g:quickrun_config._ = { "runner": "vimproc", "runner/vimproc/updatetime": 40 }
+let g:quickrun_config.markdown = {
+	\ 'outputter' : 'null',
+	\ 'command'   : 'open',
+	\ 'cmdopt'    : '-a',
+	\ 'args'      : 'Marked',
+	\ 'exec'      : '%c %o %a %s',
+	\ }
 
 " rspec highlighting
 autocmd BufRead *_spec.rb syn keyword rubyRspec describe context it specify it_should_behave_like before after setup subject its shared_examples_for shared_context let
