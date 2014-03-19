@@ -233,3 +233,7 @@ nnoremap ,b :BufExplorer<CR>
 map <Leader>mn  :MemoNew<CR>
 map <Leader>ml  :MemoList<CR>
 map <Leader>mg  :MemoGrep<CR>
+
+
+" original commands
+command! -range=% JsonBeautify :<line1>,<line2>!python -m json.tool
