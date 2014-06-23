@@ -40,8 +40,8 @@ Bundle 'thinca/vim-quickrun'
 "   $ cd ~/.vim/bundle/vimproc
 "   $ make -f make_mac.mak
 Bundle 'Shougo/vimproc'
-
-
+" taglist method list with ctags
+Bundle 'taglist.vim'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " color schemes
 """""""""""""""""""""""""""""""""""""""""""""""""""""""

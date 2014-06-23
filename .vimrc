@@ -70,6 +70,8 @@ set clipboard+=autoselect
 set clipboard+=unnamed
 " カーソル行のハイライト
 set cursorline
+" undo ファイルの無効化
+set noundofile
 
 " 文字コード関連
 " from ずんWiki http://www.kawaz.jp/pukiwiki/?vim#content_1_7
