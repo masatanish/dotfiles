@@ -43,23 +43,10 @@ Bundle 'taglist.vim'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " color schemes
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
-" wombat カラースキーム
-Bundle 'jeffreyiacono/vim-colors-wombat'
-" jellybeans カラースキーム
-Bundle 'nanotech/jellybeans.vim'
-" lucius カラースキーム
-Bundle 'vim-scripts/Lucius'
-" zenburn カラースキーム
-Bundle 'vim-scripts/Zenburn'
-" mrkn256 カラースキーム
-Bundle 'mrkn/mrkn256.vim'
-" railscasts カラースキーム
-Bundle 'jpo/vim-railscasts-theme'
-" pyte カラースキーム
-Bundle 'therubymug/vim-pyte'
-" molokai カラースキーム
-Bundle 'tomasr/molokai'
+" Japanesque
+Bundle 'aereal/vim-colors-japanesque'
+" Solarized
+Bundle 'altercation/vim-colors-solarized'
+" hybrid
+Bundle 'w0ng/vim-hybrid'
 
-Bundle 'desert256.vim'
-
-filetype plugin indent on

@@ -49,7 +49,7 @@ bashcompinit
 ##################################
 # aliases
 ##################################
-export LSCOLORS=GxfxcxdxbxGgGdabagacad
+#export LSCOLORS=GxfxcxdxbxGgGdabagacad
 alias ls="ls -G -w"
 alias la="ls -a"
 alias lf="ls -F"
@@ -109,3 +109,26 @@ function rprompt-git-current-branch {
 setopt prompt_subst
 RPROMPT='[`rprompt-git-current-branch`%~]'
 
+
+## Set path for pyenv
+export PYENV_ROOT="${HOME}/.pyenv"
+if [ -d "${PYENV_ROOT}" ]; then
+    export PATH=${PYENV_ROOT}/bin:$PATH
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+fi
+
+
+
+
+# set title bar
+preexec() {
+    mycmd=(${(s: :)${1}})
+    echo -ne "\ek$(hostname|awk 'BEGIN{FS="."}{print $1}'):$mycmd[1]\e\\"
+}
+
+precmd() {
+    echo -ne "\ek$(hostname|awk 'BEGIN{FS="."}{print $1}'):idle\e\\"
+}
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

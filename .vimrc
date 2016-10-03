@@ -143,7 +143,7 @@ endif
 " CD.vim example:// は適用しない
 autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
 
-colorscheme default
+colorscheme japanesque
 
 " 補完候補の色づけ for vim7
 hi Pmenu ctermbg=8
@@ -184,11 +184,6 @@ let g:indent_guides_start_level = 2           " 開始レベル
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgray
-
-" settings for lightline
-let g:lightline = {
-      \ 'colorscheme': 'solarized'
-      \ }
 
 " settings for quickrun
 let g:quickrun_config = {}
