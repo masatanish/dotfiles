@@ -31,8 +31,6 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'gtags.vim'
 " Qfixgrep(grep plugin
 Bundle 'fuenor/qfixgrep'
-" memolist
-Bundle 'glidenote/memolist.vim'
 " quickrun (execute scripts or programs)
 Bundle 'thinca/vim-quickrun'
 " vimproc (async execution)

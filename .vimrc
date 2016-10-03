@@ -174,9 +174,6 @@ let g:rails_default_database="sqlite3"
 
 set fenc=utf-8
 
-" settings for memolist
-let g:memolist_path = "~/Dropbox/memo"
-let g:memolist_qfixgrep = 1
 
 " settings for indent-guide(インデントのカラー表示)
 let g:indent_guides_enable_on_vim_startup = 1 " 起動時に表示
@@ -217,11 +214,3 @@ nmap ,S :set encoding=cp932<CR>
 nnoremap ,f :NERDTreeToggle<CR>
 nnoremap ,b :BufExplorer<CR>
 
-" for memolist keymapping
-map <Leader>mn  :MemoNew<CR>
-map <Leader>ml  :MemoList<CR>
-map <Leader>mg  :MemoGrep<CR>
-
-
-" original commands
-command! -range=% JsonBeautify :<line1>,<line2>!python -m json.tool
