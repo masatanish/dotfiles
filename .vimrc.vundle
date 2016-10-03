@@ -63,5 +63,5 @@ Bundle 'therubymug/vim-pyte'
 Bundle 'tomasr/molokai'
 
 Bundle 'desert256.vim'
-Bundle 'altercation/vim-colors-solarized'
+
 filetype plugin indent on

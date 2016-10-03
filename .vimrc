@@ -143,21 +143,7 @@ endif
 " CD.vim example:// は適用しない
 autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
 
-
-" colorscheme settings
-
-if (&term =~ "xterm-256color") || (&term =~ "screen-256color")
-  set t_Co=256
-  let g:solarized_termcolors=256
-elseif
-  set t_Co=16
-endif
-set background=dark
-colorscheme solarized
-
-set t_Sf=[3%dm
-set t_Sb=[4%dm
-
+colorscheme default
 
 " 補完候補の色づけ for vim7
 hi Pmenu ctermbg=8
