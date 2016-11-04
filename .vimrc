@@ -143,7 +143,10 @@ endif
 " CD.vim example:// は適用しない
 autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
 
-colorscheme japanesque
+set background=dark
+let g:hybrid_custom_term_colors = 1
+let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
+colorscheme hybrid
 
 " 補完候補の色づけ for vim7
 hi Pmenu ctermbg=8
@@ -157,7 +160,7 @@ au BufNewFile,BufRead app/**/*.rb set fenc=utf-8
 " for ruby indent
 au FileType ruby set ts=2 sw=2 expandtab
 " for python indent
-au FileType python set ts=4 sw=4 expandtab
+au FileType python setl ts=4 sw=4 expandtab cindent
 " for markdown indent
 au FileType markdown set ts=4 sw=4 sts=0
 
