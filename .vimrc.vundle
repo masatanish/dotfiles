@@ -40,6 +40,15 @@ Bundle 'thinca/vim-quickrun'
 Bundle 'Shougo/vimproc'
 " taglist method list with ctags
 Bundle 'taglist.vim'
+Bundle 'ekalinin/Dockerfile.vim'
+Bundle 'dag/vim-fish'
+Bundle 'neovimhaskell/haskell-vim'
+" Tagbar
+Bundle 'majutsushi/tagbar'
+" ghc-mod
+Bundle 'eagletmt/ghcmod-vim'
+" hspec.vim
+Bundle 'hspec/hspec.vim'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " color schemes
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
