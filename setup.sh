@@ -3,7 +3,7 @@
 
 echo "set up dotfiles..."
 echo "create symbolic links..."
-DOT_FILES=( .vimrc .zshrc .vrapperrc .rspec .tmux.conf .gitignore_global)
+DOT_FILES=( .vimrc .gvimrc .zshrc .vrapperrc .rspec .tmux.conf .gitignore_global)
 
 for file in ${DOT_FILES[@]}
 do

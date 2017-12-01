@@ -141,12 +141,13 @@ else
 endif
 
 " CD.vim example:// は適用しない
-autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
+"autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
 
 set background=dark
 let g:hybrid_custom_term_colors = 1
-let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
-colorscheme hybrid
+colorscheme hybrid 
+
+highlight LineNr ctermfg=grey
 
 " 補完候補の色づけ for vim7
 hi Pmenu ctermbg=8
@@ -160,9 +161,16 @@ au BufNewFile,BufRead app/**/*.rb set fenc=utf-8
 " for ruby indent
 au FileType ruby set ts=2 sw=2 expandtab
 " for python indent
-au FileType python setl ts=4 sw=4 expandtab cindent
+au FileType python setl ts=4 sw=4 ai expandtab
+" au FileType python setl ts=2 sw=2 ai expandtab cindent
+" autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class "改行時自動インデントする宣言
+let python_highlight_all =1 " Python用のシンタックスハイライトを全てONに
 " for markdown indent
-au FileType markdown set ts=4 sw=4 sts=0
+au FileType markdown set ts=2 sw=2 sts=0 expandtab ai
+" for haskell indent
+au FileType haskell set ts=2 sw=2 expandtab ai
+" for elm indent
+au FileType elm set ts=4 sw=4 expandtab
 
 " rails.vim
 let g:rails_level=4
@@ -185,8 +193,8 @@ let g:indent_guides_guide_size = 1            " ガイドのサイズ
 let g:indent_guides_start_level = 2           " 開始レベル
 
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgray
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgray
 
 " settings for quickrun
 let g:quickrun_config = {}
@@ -212,3 +220,21 @@ nmap ,S :set encoding=cp932<CR>
 nnoremap ,f :NERDTreeToggle<CR>
 nnoremap ,b :BufExplorer<CR>
 
+" nerdtree settings
+let NERDTreeIgnore = ['\.pyc$']
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+ exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+ exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+call NERDTreeHighlightFile('py',     'yellow',  'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('md',     'blue',    'none', '#3366FF', '#151515')
+call NERDTreeHighlightFile('yml',    'yellow',  'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('config', 'yellow',  'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('conf',   'yellow',  'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('json',   'yellow',  'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('html',   'yellow',  'none', 'yellow',  '#151515')
+call NERDTreeHighlightFile('styl',   'cyan',    'none', 'cyan',    '#151515')
+call NERDTreeHighlightFile('css',    'cyan',    'none', 'cyan',    '#151515')
+call NERDTreeHighlightFile('rb',     'Red',     'none', 'red',     '#151515')
+call NERDTreeHighlightFile('js',     'Red',     'none', '#ffa500', '#151515')
+call NERDTreeHighlightFile('php',    'Magenta', 'none', '#ff00ff', '#151515')
